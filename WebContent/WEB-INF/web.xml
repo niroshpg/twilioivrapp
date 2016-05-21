@@ -7,14 +7,17 @@
     <servlet>
         <servlet-name>ivr-welcome</servlet-name>
         <servlet-class>com.twilio.phonetree.servlet.ivr.WelcomeServlet</servlet-class>
+         <load-on-startup>1</load-on-startup>
     </servlet>
        <servlet>
         <servlet-name>menu-show</servlet-name>
         <servlet-class>com.twilio.phonetree.servlet.menu.ShowServlet</servlet-class>
+         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>commuter-connect</servlet-name>
         <servlet-class>com.twilio.phonetree.servlet.commuter.ConnectServlet</servlet-class>
+         <load-on-startup>1</load-on-startup>
     </servlet>
     
     <servlet-mapping>

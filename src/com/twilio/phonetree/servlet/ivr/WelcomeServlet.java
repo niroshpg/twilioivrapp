@@ -23,33 +23,9 @@ import com.twilio.sdk.verbs.TwiMLResponse;
 public class WelcomeServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 8160022442651262161L;
-	private static final String HOST_URL = null;
+	private static final String HOST_URL = "http://localhost:8080";
 	
-	@Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
-            throws ServletException, IOException {
-        
-		TwiMLResponse response = new TwiMLResponse();
-		Gather gd = new Gather();
-     
-        gd.setAction(HOST_URL+"/ivr/welcome");
-        gd.setMethod("POST");
-        gd.setNumDigits(1);
-        gd.setTimeout(7);
-       // gd.setRetries(1);
-        //Speak spk = new Speak(IVR_MESSAGE1);
-       // Speak speak = new Speak(NO_INPUT_MESSAGE);
-        try {
-           // gd.append(spk);
-            response.append(gd);
-            //response.append(speak);
-            //System.out.println(response.toXML());
-            resp.addHeader("Content-Type", "text/xml");
-            resp.getWriter().print(response.toXML());;
-        } catch (TwiMLException e) {
-            e.printStackTrace();
-        }       
-    }
+	
 	 @Override
 	    protected void doPost(HttpServletRequest servletRequest, HttpServletResponse servletResponse)
 	            throws IOException {

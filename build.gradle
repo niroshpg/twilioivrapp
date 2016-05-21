@@ -2,8 +2,6 @@ apply plugin: 'war'
 apply plugin: 'jetty'
 apply plugin: 'eclipse-wtp'
 
-
-
 project.webAppDirName = 'WebContent'
 
 sourceSets {
@@ -12,6 +10,7 @@ sourceSets {
         resources { srcDir 'src' }
     }
 }
+
 configurations { moreLibs }
 
 repositories {
