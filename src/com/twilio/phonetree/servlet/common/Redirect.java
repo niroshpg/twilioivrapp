@@ -15,7 +15,7 @@ public class Redirect {
         TwiMLResponse response = new TwiMLResponse();
 
         response.append(say);
-        response.append(new com.twilio.sdk.verbs.Redirect("/ivr/welcome"));
+        response.append(new com.twilio.sdk.verbs.Redirect("/twilioivrapp/ivr/welcome"));
 
         return response;
     }

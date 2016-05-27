@@ -63,7 +63,7 @@ public class ShowServlet extends HttpServlet {
     private TwiMLResponse getPlanets() throws TwiMLException {
 
         Gather gather = new Gather();
-        gather.setAction("/commuter/connect");
+        gather.setAction("/twilioivrapp/commuter/connect");
         gather.setNumDigits(1);
 
         Say phrase = new Say(

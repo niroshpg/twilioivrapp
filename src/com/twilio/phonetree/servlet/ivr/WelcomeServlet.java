@@ -31,7 +31,7 @@ public class WelcomeServlet extends HttpServlet {
 	            throws IOException {
 
 	        Gather gather = new Gather();
-	        gather.setAction("/menu/show");
+	        gather.setAction("/twilioivrapp/menu/show");
 	        gather.setNumDigits(1);
 
 	        Play play = new Play("http://howtodocs.s3.amazonaws.com/et-phone.mp3");
